@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"  th:href="@{/mystyle.css}" />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Rumos Bank</title>
+
+</head>
+
+<body>
+<div class="wrapper">
+    <div class= "logo animate__animated animate__bounceInDown">
+        <i class='bx bxs-bank' ></i>
+    </div>
+    <header>RUMOS BANK</header>
+</div>
+<div class="circle"></div>
+<div class="card" >
+    <div class="logo">
+        <i class='bx bx-user-circle'></i>
+    </div>
+    <h2>Login to your client account</h2>
+    <form class="form">
+        <button class="buttoncenter"><a class="refstyler" th:href="@{/login}">Login</a></button>
+    </form>
+    <footer>
+        If you don't already have an account, sign in
+        <a th:href="@{/register}">here</a>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Rumos Bank</title>
+    
+</head>
+<div class="wrapper">
+    <div class="logo">
+        <i class='bx bxs-bank' ></i>
+    </div>
+    <header>RUMOS BANK</header>
+</div>
+<body>
+
+    <div class="circle"></div>
+    <div class="card" style="top:-70px;">
+        <div class="logo">
+            <i class='bx bx-user-circle'></i>
+        </div>
+        <h2>Create New Client</h2>
+        <form class="form" th:action="@{/process_register}" th:object="${client}"
+              method="post" >
+            <input type="text"th:field="*{firstName}"placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" th:field="*{email}" required />
+            <input type="number" th:field="*{nif}" placeholder="NIF" min="100000000" max="300000000" required>
+            <input type="number" placeholder="Mobile Number" minlength="9" maxlength="9" required>
+            <input type="number" placeholder="Telephone Number" minlength="9" maxlength="9" required>
+            <input type="text" placeholder="Profession" required>
+            <input type="password" th:field="*{password}" placeholder="Password" minlength="4"  maxlength="4" required>
+
+            
+            <button type="submit">Create</button>
+            <input type="reset" value="Clear" class="reset">
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>List Users</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container text-center">
+    <div>
+        <form th:action="@{/logout}" method="post">
+            <p>
+                Welcome <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+            </p>
+            <input type="submit" value="Sign Out" />
+        </form>
+    </div>
+    <div>
+        <h1>List of Accounts</h1>
+    </div>
+
+    <div>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>Account ID</th>
+                <th>NIF</th>
+                <th>Account Holder</th>
+                <th>Credit Cards</th>
+                <th>Debit Cards</th>
+                <th>Balance</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user: ${listaccounts}">
+                <td th:text="${user.id}">Account ID</td>
+                <td th:text="${user.nif}">NIF</td>
+                <td th:text="${user.accountHolderName}">Account Holder</td>
+                <td th:text="${user.creditCards}">Credit Cards</td>
+                <td th:text="${user.debitCards}">Debit Cards</td>
+                <td th:text="${user.balance}">Balance</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

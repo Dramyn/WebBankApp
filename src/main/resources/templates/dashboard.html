@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" th:href="@{/mystyle.css}">
+    <title>Rumos Bank</title>
+
+</head>
+
+<body>
+
+
+</div>
+<div class="card" style="top:-70px;">
+
+    <h2>Client Dashboard</h2>
+
+    <form class="form">
+        <button><a class="refstyler" th:href="@{/registerAccount}">CreateAccount</a></button>
+        <button><a class="refstyler" th:href="@{/list_users}">List of Clients</a></button>
+        <button><a class="refstyler" th:href="@{/list_accounts}">List of Accounts</a></button>
+        <button><a class="refstyler" th:href="@{/list_transactions}">List of Transactions</a></button>
+        <button><a class="refstyler" th:href="@{/withdrawl}">Withdrawal</a></button>
+        <button><a class="refstyler" th:href="@{/deposit}">Deposits</a></button>
+        <button><a class="refstyler" th:href="@{/transfer}">Transfers</a></button>
+        <button><a class="refstyler" th:href="@{/logout}">Logout</a></button>
+    </form>
+
+</div>
+
+</body>
+</html>

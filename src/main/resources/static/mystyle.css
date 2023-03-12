@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Josefin+Slab:wght@100;200;400&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+header {
+    display: grid;
+    font-size: 40px;
+    place-items: center;
+    font-family: "Cormorant Garamond";
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: blue;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 32px;
+    background-color: #f6f6f6;
+    opacity: 1;
+    background-image:  radial-gradient(#898dcf 0.9500000000000001px, transparent 0.9500000000000001px), radial-gradient(#898dcf 0.9500000000000001px, #f6f6f6 0.9500000000000001px);
+    background-size: 38px 38px;
+    background-position: 0 0,19px 19px;
+    font-family: "Ubuntu";
+    animation: rotate 6s infinite alternate linear;
+}
+
+.refstyler {
+    text-decoration: none;
+    color: white;
+}
+
+.wrapper{
+    position: absolute;
+    width: 40%;
+    padding: 20px 30px 20px;
+    border: 1.5px solid blue;
+    border-radius: 60px;
+    background: white;
+    text-align: center;
+    top: 100px;
+    left: 770px;
+}
+
+.wrapper .logo, .wrapper .logo>button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid blue;
+    border-top-left-radius: 110px;  
+    border-top-right-radius: 110px; 
+    border-bottom: 0;
+    background-color: white;
+    height: 70px;
+    width: 100px;
+    top: -50px;
+    left: 450px;
+}
+
+.wrapper .logo i{
+    font-size: 70px;
+    color: blue;
+}
+
+
+
+.circle {
+    position: fixed;
+    top: -60vmin;
+    left: -60vmin;
+    width: 100vmin;
+    height: 100vmin;
+    border-radius: 47% 53% 61% 39%;
+    background: rgb(63, 178, 223);
+}
+
+.circle::after {
+    content: "";
+    position: inherit;
+    right: -65vmin;
+    bottom: -65vmin;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: rgb(52, 52, 197);
+}
+
+.card {
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 150px 30px 30px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    background: white;
+    text-align: center;
+
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    background: rgb(112, 112, 225);
+    top: -20px;
+    left: 50%;
+    height: 140px;
+    width: 1000px;
+    translate: -50% 0;
+
+}
+
+.card .logo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(209, 206, 237);
+    height: 70px;
+    width: 70px;
+    top: 30px;
+    left: 50%;
+    translate: -50% 0;
+}
+
+.card .logo i {
+    font-size: 90px;
+    color: rgb(112, 112, 225);
+}
+
+.card>h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 30px;
+    color: black;
+}
+
+.form {
+    margin: 0 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.buttoncenter {
+    display: block;
+    margin: 0 auto;
+}
+
+.form>input,
+.form>button {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.form>input {
+    border: 2px solid #e0e0e0;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 0 24px;
+    transition: all 0.375s;
+}
+
+.form>input:hover {
+    border: 2px solid black;
+}
+
+.form>button, .form>input.reset {
+    cursor: pointer;
+    display: inline-block;
+    width: 47%;
+    height: 50px;
+    padding: 0 16px;
+    background: rgb(112, 112, 225);
+    color: white;
+    border: 0;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+}
+
+.form>button:hover, .form>input.reset:hover {
+    color: #e0e0e0;
+    background: rgb(52, 52, 197);
+}
+
+.card>footer {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 0;
+}
+
+.card>footer>a {
+    transition: all 0.375s;
+}
+
+.card>footer>a:hover {
+    color: rgb(178, 178, 239)
+}
+
+.sidebarWrapper .sidebar{
+    background: rgb(5, 26, 104);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.sidebarWrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebarWrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.sidebarWrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.sidebarWrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+
+.sidebarWrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.sidebarWrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 50px;
+    height: 30px;
+    display: inline-block;
+}
+
+.fas, .far, .item{
+    font-size: 20px;
+    position: center;
+}
+
+
+.sidebarWrapper .sidebar ul li a:hover,
+.sidebarWrapper .sidebar ul li a.active{
+    color: #0c7db1;
+
+    background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.sidebarWrapper .sidebar ul li a:hover .icon,
+.sidebarWrapper .sidebar ul li a.active .icon{
+    color: #0c7db1;
+}
+
+.sidebarWrapper .sidebar ul li a:hover:before,
+.sidebarWrapper .sidebar ul li a.active:before{
+    display: block;
+}
+
+.sidebarWrapper .section{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    transition: all 0.5s ease;
+}
+
+.sidebarWrapper .section .top_navbar{
+    background: rgb(5, 26, 104);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+
+}
+
+.sidebarWrapper .section .top_navbar .burger_button a{
+    font-size: 28px;
+    color: #f4fbff;
+}
+
+.sidebarWrapper .section .top_navbar .burger_button a:hover{
+    color: #a2ecff;
+}
+
+body.active .sidebarWrapper .sidebar{
+    left: -300px;
+}
+
+body.active .sidebarWrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+
+
+
+@media (width >=500px) {
+    body {
+        padding: 0;
+    }
+
+    .card {
+        margin: 0;
+        width: 500px;
+    }
+}
